@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 
 const Prices = () => {
@@ -27,8 +27,13 @@ const Prices = () => {
         if (limit >= maxLimit) {
           setShowMessage(true);
         }
-      } catch (error) {
-        console.error("Error:", error.message);
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          console.error("Error:", error.message);
+        } else {
+          // Handle other types of errors here
+          console.error("Unexpected error:", error);
+        }
       }
     };
 
