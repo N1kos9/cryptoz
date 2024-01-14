@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className=" text-black w-full max-w-[1280px] mx-auto   ">
       <h1 className="text-center lg:text-4xl text-2xl font-semibold mb-10">
-        We'd love to hear from you
+        We&lsquo;d love to hear from you
       </h1>
       <div className="grid lg:grid-cols-2 gap-8 ">
         <div className="border border-black rounded p-8 flex flex-col">
