@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
-import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 
 const Prices = () => {
   const [coins, setCoins] = useState([]);
@@ -19,8 +18,6 @@ const Prices = () => {
         });
 
         const data = response.data;
-        console.log(data);
-
         // Set your state if needed
         setCoins(data.data);
         // Assuming the data you need is in the 'data' property of the response

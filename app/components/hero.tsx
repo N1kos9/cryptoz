@@ -3,6 +3,8 @@ import Image from "next/image";
 import item from "@/assets/item.webp";
 import { FaInstagram, FaLinkedinIn, FaRedditAlien } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <main>
@@ -10,12 +12,31 @@ const Hero = () => {
         <div className="svg-item"></div>
       </div>
       <div className="text-center text-5xl mt-20 flex flex-col items-center">
-        <h1 className="font-semibold lg:w-3/5 text-3xl">
+        <h1 className="font-semibold lg:w-3/5 text-5xl">
           One of the biggest Cryptocurrency platform for you
         </h1>
-        <div className="mt-24">
+        <motion.div
+          initial={{ y: 50, rotate: 5 }}
+          animate={{
+            y: [50, -50, 50], // Bouncing effect
+            rotate: [5, -5, 5], // Rotating effect
+          }}
+          transition={{
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+            rotate: {
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+          className="mt-24"
+        >
           <Image src={item} width={250} height={250} alt="item" />
-        </div>
+        </motion.div>
         <div className="hidden lg:absolute lg:flex lg:flex-col lg:left-20 lg:bottom-0 lg:mb-8 lg:text-black">
           <FaInstagram size={20} className="mb-8" />
           <FaLinkedinIn size={20} className="mb-8" />
