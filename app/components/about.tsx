@@ -26,7 +26,7 @@ const About = () => {
         </p>
         <p className="mt-5">Mouthwatering leading how real formula also</p>
         <p className="mt-3">Locked-in have can mountain thought</p>
-        <button className="bg-purple text-white hover:bg-blue duration-300 p-4 rounded hover:bg-purple duration-300 font-semibold mt-10">
+        <button className="bg-purple text-white hover:bg-blue p-4 rounded duration-300 font-semibold mt-10">
           Download Document
         </button>
       </div>

@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Prices from "./components/prices";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
         <About />
       </main>
       <Prices />
+
+      <Contact />
+      <Footer />
     </>
   );
 }

@@ -49,6 +49,28 @@ a {
   position: relative;
   background-image: url("../assets/banner_bg.jpg");
 }
+.second-banner {
+  background: rgb(2, 0, 36);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(7, 7, 93, 0.9023984593837535) 35%,
+    rgba(7, 111, 133, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(7, 7, 93, 0.9023984593837535) 35%,
+    rgba(7, 111, 133, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(7, 7, 93, 0.9023984593837535) 35%,
+    rgba(7, 111, 133, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#076f85",GradientType=1);
+}
 @media (max-width: 991.98px) {
   .svg-item {
     height: calc(100% - 120px);

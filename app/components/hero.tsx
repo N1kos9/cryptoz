@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="svg-item"></div>
       </div>
       <div className="text-center text-5xl mt-20 flex flex-col items-center">
-        <h1 className="font-semibold lg:w-3/5 ">
+        <h1 className="font-semibold lg:w-3/5 text-3xl">
           One of the biggest Cryptocurrency platform for you
         </h1>
         <div className="mt-24">
