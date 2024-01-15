@@ -15,10 +15,6 @@ li:hover {
   color: #00c4f4;
   transition: 0.4s;
 }
-a {
-  font-size: 1rem;
-  font-weight: 600;
-}
 .svg-item {
   background-size: cover;
   background-position: center;

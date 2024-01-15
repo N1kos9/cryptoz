@@ -1,5 +1,5 @@
 "use client";
-
+import SecondNavbar from "./components/secondNavbar";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
@@ -10,7 +10,8 @@ export default function Home() {
   return (
     <>
       <main className="w-full max-w-[1280px] mx-auto ">
-        <Navbar />
+        {/* <Navbar /> */}
+        <SecondNavbar />
         <Hero />
         <About />
       </main>

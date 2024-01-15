@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="bg-banner">
         <div className="svg-item "></div>
       </div>
-      <div className="text-center text-5xl mt-20 flex flex-col items-center">
+      <div className="text-center text-5xl mt-36 flex flex-col items-center ">
         <motion.h1
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
