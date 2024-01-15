@@ -95,7 +95,7 @@ const Prices = () => {
               ) : (
                 <button
                   onClick={handleLoadMore}
-                  className="bg-purple text-white hover:bg-blue p-4 rounded hover:bg-purple duration-300 font-semibold mt-10 mb-6"
+                  className="bg-purple text-white cursor-pointer hover:bg-blue p-4 rounded hover:bg-purple duration-300 font-semibold mt-10 mb-6"
                 >
                   Load 5 More Coins
                 </button>
