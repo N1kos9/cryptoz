@@ -23,7 +23,7 @@ const Navbar = () => {
           </h1>
 
           <div
-            className="cursor-pointer lg:hidden pl-5 absolute right-10"
+            className="cursor-pointer lg:hidden pl-5 absolute right-5"
             onClick={handleClick}
           >
             {click ? <FaTimes size={20} /> : <FaBars size={20} />}
