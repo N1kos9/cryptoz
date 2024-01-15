@@ -16,9 +16,9 @@ const Hero = () => {
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.0, ease: "easeInOut" }}
-          className="font-semibold lg:w-3/5 text-5xl"
+          className="font-semibold lg:w-3/5 lg:text-5xl text-3xl p-1"
         >
-          One of the biggest Cryptocurrency platform for you
+          The biggest Cryptocurrency platform for you
         </motion.h1>
         <motion.div
           initial={{ y: "100%", opacity: 0 }}

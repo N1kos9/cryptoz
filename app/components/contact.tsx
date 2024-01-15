@@ -6,7 +6,7 @@ const Contact = () => {
       <h1 className="text-center lg:text-4xl text-2xl font-semibold mb-10">
         We&lsquo;d love to hear from you
       </h1>
-      <div className="grid lg:grid-cols-2 gap-8 ">
+      <div className="grid lg:grid-cols-2 gap-8 mx-10">
         <div className="border border-black rounded p-8 flex flex-col">
           <h1 className="text-center text-3xl font-semibold">
             I have a technical question

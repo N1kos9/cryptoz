@@ -57,33 +57,35 @@ const Prices = () => {
               <p className="w-[150px] p-4 lg:block hidden">supply</p>
               <p className="w-2/3 text-right p-4">price</p>
             </div>
-            {coins.map(
-              ({ id, name, rank, priceUsd, supply, changePercent24Hr }) => (
-                <tr
-                  key={id}
-                  className="flex items-center lg:pr-[24px] lg:min-w-[1200px] w-4/5 border-b"
-                >
-                  <div className="w-[150px] lg:p-4 p-0">
-                    <p className="">{rank}</p>
-                  </div>
-                  <div className="w-[150px] ml-2 lg:p-4 p-0">
-                    <p className="">{name}</p>
-                  </div>
-                  <p className="w-[150px] p-4 lg:block hidden">
-                    {parseFloat(supply).toFixed(2)}
-                  </p>
-                  {changePercent24Hr < 0 ? (
-                    <p className="w-2/3 p-4 text-right text-red">
-                      ${parseFloat(priceUsd).toFixed(2)}
+            <div className="lg:pr-[24px] lg:min-w-[1200px] w-4/5 bg-white/10 z-10 backdrop-filter backdrop-blur-5xl shadow-lg rounded-md">
+              {coins.map(
+                ({ id, name, rank, priceUsd, supply, changePercent24Hr }) => (
+                  <tr
+                    key={id}
+                    className="  flex items-center lg:pr-[24px] lg:min-w-[1200px] w-full border-b"
+                  >
+                    <div className="w-[150px] lg:p-4 p-5">
+                      <p className="">{rank}</p>
+                    </div>
+                    <div className="w-[150px] ml-2 lg:p-4 p-0">
+                      <p className="">{name}</p>
+                    </div>
+                    <p className="w-[150px] p-4 lg:block hidden">
+                      {parseFloat(supply).toFixed(2)}
                     </p>
-                  ) : (
-                    <p className="w-2/3 p-4 text-right text-green">
-                      ${parseFloat(priceUsd).toFixed(2)}
-                    </p>
-                  )}
-                </tr>
-              )
-            )}
+                    {changePercent24Hr < 0 ? (
+                      <p className="w-2/3 p-4 text-right text-red">
+                        ${parseFloat(priceUsd).toFixed(2)}
+                      </p>
+                    ) : (
+                      <p className="w-2/3 p-4 text-right text-green">
+                        ${parseFloat(priceUsd).toFixed(2)}
+                      </p>
+                    )}
+                  </tr>
+                )
+              )}
+            </div>
 
             <div>
               {showMessage ? (

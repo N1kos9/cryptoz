@@ -6,7 +6,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
   return (
     <>
-      <div className="w-full h-[90px] top-0 left-0 z-10 overflow-y-hidden overflow-x-hidden">
+      <div className="w-full h-[90px] top-0 left-0 z-10 overflow-y-hidden overflow-x-hidden overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,7 +37,7 @@ const Navbar = () => {
             </li>
           </ul>
           <div>
-            <button className="bg-blue p-4 rounded hover:bg-purple duration-300 font-semibold">
+            <button className="bg-blue p-3 rounded hover:bg-purple duration-300 font-semibold">
               Connect Wallet
             </button>
           </div>

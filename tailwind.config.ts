@@ -22,7 +22,7 @@ const config: Config = {
       black: "#000000",
       white: "#FFFFFF",
       red: "#FF0000",
-      green: "#008000",
+      green: "#90EE90",
     },
   },
   plugins: [],
