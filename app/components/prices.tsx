@@ -5,7 +5,7 @@ import axios, { AxiosError } from "axios";
 const Prices = () => {
   const [coins, setCoins] = useState([]);
   const [limit, setLimit] = useState(5);
-  const maxLimit = 10;
+  const maxLimit = 15;
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
@@ -57,30 +57,38 @@ const Prices = () => {
               <p className="w-[150px] p-4 lg:block hidden">supply</p>
               <p className="w-2/3 text-right p-4">price</p>
             </div>
-            {coins.map(({ id, name, rank, priceUsd, supply }) => (
-              <tr
-                key={id}
-                className="flex items-center lg:pr-[24px] lg:min-w-[1200px] w-4/5 border-b"
-              >
-                <div className="w-[150px] lg:p-4 p-0">
-                  <p className="">{rank}</p>
-                </div>
-                <div className="w-[150px] ml-2 lg:p-4 p-0">
-                  <p className="">{name}</p>
-                </div>
-                <p className="w-[150px] p-4 lg:block hidden">
-                  {parseFloat(supply).toFixed(2)}
-                </p>
-                <p className="w-2/3 p-4 text-right">
-                  ${parseFloat(priceUsd).toFixed(2)}
-                </p>
-              </tr>
-            ))}
+            {coins.map(
+              ({ id, name, rank, priceUsd, supply, changePercent24Hr }) => (
+                <tr
+                  key={id}
+                  className="flex items-center lg:pr-[24px] lg:min-w-[1200px] w-4/5 border-b"
+                >
+                  <div className="w-[150px] lg:p-4 p-0">
+                    <p className="">{rank}</p>
+                  </div>
+                  <div className="w-[150px] ml-2 lg:p-4 p-0">
+                    <p className="">{name}</p>
+                  </div>
+                  <p className="w-[150px] p-4 lg:block hidden">
+                    {parseFloat(supply).toFixed(2)}
+                  </p>
+                  {changePercent24Hr < 0 ? (
+                    <p className="w-2/3 p-4 text-right text-red">
+                      ${parseFloat(priceUsd).toFixed(2)}
+                    </p>
+                  ) : (
+                    <p className="w-2/3 p-4 text-right text-green">
+                      ${parseFloat(priceUsd).toFixed(2)}
+                    </p>
+                  )}
+                </tr>
+              )
+            )}
 
             <div>
               {showMessage ? (
                 <p className="text-3xl pt-10 pb-5 text-center font-semibold">
-                  To see more details, download our app.
+                  To see more details, connect your wallet.
                 </p>
               ) : (
                 <button

@@ -1,49 +1,57 @@
-import React from "react";
 import Image from "next/image";
 import item from "@/assets/item.webp";
 import { FaInstagram, FaLinkedinIn, FaRedditAlien } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Hero = () => {
   return (
     <main>
       <div className="bg-banner">
-        <div className="svg-item"></div>
+        <div className="svg-item "></div>
       </div>
       <div className="text-center text-5xl mt-20 flex flex-col items-center">
-        <h1 className="font-semibold lg:w-3/5 text-5xl">
-          One of the biggest Cryptocurrency platform for you
-        </h1>
-        <motion.div
-          initial={{ y: 50, rotate: 5 }}
-          animate={{
-            y: [50, -50, 50], // Bouncing effect
-            rotate: [5, -5, 5], // Rotating effect
-          }}
-          transition={{
-            y: {
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-            rotate: {
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-          }}
-          className="mt-24"
+        <motion.h1
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.0, ease: "easeInOut" }}
+          className="font-semibold lg:w-3/5 text-5xl"
         >
-          <Image src={item} width={250} height={250} alt="item" />
+          One of the biggest Cryptocurrency platform for you
+        </motion.h1>
+        <motion.div
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: "100%", opacity: 0 }} // Optional: Add exit opacity for smoother exit transition
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 1.5,
+          }}
+          // Adjust stiffness and damping for slower animation
+          className="mt-24 "
+        >
+          <Image src={item} width={250} height={250} alt="item" className="" />
         </motion.div>
-        <div className="hidden lg:absolute lg:flex lg:flex-col lg:left-20 lg:bottom-0 lg:mb-8 lg:text-black">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut", delay: 2.0 }}
+          className="hidden lg:absolute lg:flex lg:flex-col lg:left-20 lg:bottom-0 lg:mb-8 lg:text-black"
+        >
           <FaInstagram size={20} className="mb-8" />
           <FaLinkedinIn size={20} className="mb-8" />
           <FaRedditAlien size={20} className="mb-8" />
           <CiTwitter size={20} className="mb-8" />
-        </div>
-        <div className="hidden lg:absolute lg:right-20 lg:bottom-20 lg:flex lg:items-center lg:flex-col">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut", delay: 2.0 }}
+          className="hidden lg:absolute lg:right-20 lg:bottom-20 lg:flex lg:items-center lg:flex-col"
+        >
           <p className="text-black text-sm [writing-mode:vertical-lr] mb-10 tracking-[.45rem] opacity-60 uppercase">
             Scroll Down
           </p>
@@ -63,7 +71,7 @@ const Hero = () => {
               fill="#081A39"
             />
           </svg>
-        </div>
+        </motion.div>
       </div>
     </main>
   );
