@@ -47,7 +47,8 @@ const Prices = () => {
     <main className="relative mt-20 lg:w-full mb-20">
       <div className="second-banner">
         <h1 className="lg:text-4xl text-2xl font-semibold text-center pt-20 text-balance pb-10">
-          Explore top&apos;s crypto&apos;s and get a concret idea for top icons!
+          Explore top&apos;s crypto&apos;s and get a general idea of which are
+          the top coins!
         </h1>
         <div className="w-full max-w-[1180px] mx-auto ">
           <div className="flex flex-col justify-start items-center height-[80px] w-full">
